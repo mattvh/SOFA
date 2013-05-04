@@ -21,6 +21,8 @@ Returns all feeds that the user is subscribed to.
             "image_url": null
         }
     ]
+    
+An empty array should be returned if the user has not subscribed to any feeds.
 
 **Parameters**
 
