@@ -7,7 +7,7 @@ Subscriptions
 
 Returns all feeds that the user is subscribed to.
 
-** Response **
+**Response**
 
     [
         {
@@ -22,10 +22,10 @@ Returns all feeds that the user is subscribed to.
         }
     ]
 
-** Parameters**
+**Parameters**
 
 None
 
-** Status Codes **
+**Status Codes**
 
 * `200 OK` — Success
