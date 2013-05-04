@@ -1,0 +1,5 @@
+Subscriptions
+==========
+
+
+GET /subscriptions.json

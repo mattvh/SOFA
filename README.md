@@ -1,5 +1,5 @@
 Standardized Open Feed API (SOFA)
-====
+==========================
 
 ### Draft 1
 
@@ -44,3 +44,16 @@ Example:
 
     "pubdate": 1367708878
     "pubdate_human_readable": "2013-05-04T18:07:58"
+
+
+Results Format
+------------------
+
+Requests should return data formatted as JSON. Conceivably,  XML result sets could be returned as well, if the request has a `.xml` extension rather than `.json`. However, XML usage has been on the decline for some time (and there are many criticisms of the format). As such, implementing XML responses is entirely optional, and the rest of this document will focus exclusively on JSON.
+
+
+API Objects
+--------------
+
+* [Subscriptions](objects/subscriptions.md)
+* [Feed Items](objects/items.md)
