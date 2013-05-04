@@ -43,7 +43,7 @@ Any dates returned by the API should be in the form of a [Unix timestamp](http:/
 Example:
 
     "pubdate": 1367708878
-    "pubdate_human_readable": "2013-05-04T18:07:58"
+    "pubdate_human": "2013-05-04T18:07:58"
 
 
 Results Format
