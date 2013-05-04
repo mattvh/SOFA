@@ -1,7 +1,7 @@
 Standardized Open Feed API (SOFA)
 ====
 
-### Draft 1.0
+### Draft 1
 
 Why can't I take my preferred RSS client (e.g. Reeder, NetNewsWire) and pair it up with the backend of my choice, such as NewsBlur, FeedBin, Feedly, or a custom server I host myself? In the wake of the Google Reader shutdown, there are more viable options than ever for web-based RSS reading and syncing. But native clients only support so many of them.
 
@@ -17,8 +17,30 @@ Requests should be served from a common URL along the lines of `http://mydomain.
 
 Either HTTP or HTTPS is acceptable, though the latter is of course preferred.
 
+The URL structure of a request should look something like this:
+
+    http://mydomain.tld/api/1/subscriptions.json
+    
+The "1" is the API version, which would change in whole or decimal increments as incompatible changes are made to future versions of the spec. The API endpoints follow the version.
+
 
 Authentication
 ------------------
 
 Users should be authenticated with basic HTTP authentication, the client supplying a username and password (or alternately a private API key) with each request.
+
+Example:
+
+    curl -u "username:password" -d "somevar=something" \
+    http://mydomain.tld/api/1/subscriptions.json
+
+    
+Dates
+-------
+
+Any dates returned by the API should be in the form of a [Unix timestamp](http://en.wikipedia.org/wiki/Unix_timestamp), with a second "human readable time" field providing the date in [ISO 8601](http://www.w3.org/TR/NOTE-datetime) format. A timezone should not be specified in the ISO 8601 field, as UTC should be assumed.
+
+Example:
+
+    "pubdate": 1367708878
+    "pubdate_human_readable": "2013-05-04T18:07:58"
