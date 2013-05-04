@@ -23,7 +23,7 @@ Returns all feeds that the user is subscribed to.
     ]
     
 * An empty array should be returned if the user has not subscribed to any feeds.
-* "id" is a global representation of the feed, regardless of user. If two users are subscribed to the Ars Technica feed in the above example, the same ID would be returned for both users.
+* "id" is a global representation of the feed, regardless of user. If two users are subscribed to the Ars Technica feed in the above example, the same ID would be returned for both users. (How the server manages feeds and subscriptions internally is of no business to the API.)
 * "image_url" is the channel image found in the RSS 2.0 spec. Return null if not set.
 
 **Parameters**
@@ -60,6 +60,7 @@ None
 **Status Codes**
 
 * `200 OK` — Success
+* `404 Not Found` — The user does not have a subscription with this ID.
 
 
 `POST /subscriptions.json`
@@ -73,10 +74,29 @@ Subscription object is returned on success or if the user is already subscribed 
 
 **Parameters**
 
-* `feed_url` — The URL to subscribe the active user to. e.g. `http://www.theverge.com/rss/index.xml`
+* `feed_url` — The feed to subscribe the active user to. e.g. `http://www.theverge.com/rss/index.xml`
 
 **Status Codes**
 
 * `201 Created` — Success
 * `302 Found` — The user is already subscribed to this feed.
 * `404 Not Found` — The supplied feed URL is bad.
+
+
+`DELETE /subscriptions/42.json`
+----------------------------------------
+
+Unsubscribes the user from the subscription with the ID of 3.
+
+**Response**
+
+None
+
+**Parameters**
+
+None
+
+**Status Codes**
+
+* `410 Gone` — Success
+* `404 Not Found` — The user does not have a subscription with this ID.
