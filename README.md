@@ -57,3 +57,9 @@ API Objects
 
 * [Subscriptions](objects/subscriptions.md)
 * [Feed Items](objects/items.md)
+
+
+Todo
+------
+
+* Add some sort of folder/tag taxonomy so a user's feed categorization can be properly described.
