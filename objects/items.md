@@ -50,3 +50,44 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
 **Status Codes**
 
 * `200 OK` — Success
+
+
+`GET /items/3571.json`
+----------------------------
+
+Returns a single item by its unique ID.
+
+**Response**
+
+    {
+        "id": 3571,
+        "feed_id": 36,
+        "title": "Terry Pratchett Announces New Discworld Novel \201cRaising Steam\201d",
+        "url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/",
+        "pubdate:  1362854961,
+        "pubdate_human": "2013-03-09T12:49:21",
+        "category": [
+            "News"
+        ]
+        "comments_url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/#comments",
+        "guid": "http:\/\/www.fantasyfolder.com\/?p=942",
+        "content": "[...]",
+        "summary": "[...]",
+        "enclosures": [
+            {
+                "url": "http://cdn.somedomain.tld/audio/somefile.mp3",
+                length: 24986239,
+                type: "audio/mpeg"
+            }
+        ]
+    }
+
+**Parameters**
+
+None
+
+**Status Codes**
+
+* `200 OK` — Success
+* `404 Not Found` — No item was found with this ID
+* `403 Not Found` — The user is not subscribed to the feed this item belongs to
