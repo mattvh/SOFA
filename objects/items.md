@@ -51,6 +51,14 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
 
 * `200 OK` — Success
 
+**Notes for Discussion**
+
+As it stands, items belonging to a subscription are queried using the `feed_id` parameter. Is that the best way to handle it, or should it work more like this:
+
+    GET /subscriptions/42/entries.json
+    
+On one hand, it feels more "REST-y," on the other hand, the current seems semantically okay as well.
+
 
 `GET /items/3571.json`
 ----------------------------
@@ -89,5 +97,25 @@ None
 **Status Codes**
 
 * `200 OK` — Success
-* `404 Not Found` — No item was found with this ID
-* `403 Not Found` — The user is not subscribed to the feed this item belongs to
+* `404 Not Found` — No item was found with this ID.
+* `403 Not Found` — The user is not subscribed to the feed this item belongs to.
+
+
+`POST /items/3571/mark_as_read.json`
+-----------------------------------------------
+
+Sets the item's `read` field to `true` or `false`, according to the supplied parameter.
+
+**Response**
+
+None
+
+**Parameters**
+
+* `read: boolean` — Set the item's read/unread flag.
+
+**Status Codes**
+
+* `200 OK` — Success
+* `404 Not Found` — No item was found with this ID.
+* `403 Not Found` — The user is not subscribed to the feed this item belongs to.
