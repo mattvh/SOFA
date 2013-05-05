@@ -23,7 +23,7 @@ Returns all feeds that the user is subscribed to.
     ]
     
 * An empty array should be returned if the user has not subscribed to any feeds.
-* "id" is a global representation of the feed, regardless of user. If two users are subscribed to the Ars Technica feed in the above example, the same ID would be returned for both users. (How the server manages feeds and subscriptions internally is of no business to the API.)
+* `id` is a global representation of the feed, regardless of user. If two users are subscribed to the Ars Technica feed in the above example, the same ID would be returned for both users. (How the server manages feeds and subscriptions internally is of no business to the API.)
 * "image_url" is the channel image found in the RSS 2.0 spec. Return null if not set.
 
 **Parameters**
