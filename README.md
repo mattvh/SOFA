@@ -7,7 +7,7 @@ Why can't I take my preferred RSS client (e.g. Reeder, NetNewsWire) and pair it 
 
 The way I see it, I should be able to choose one of each, a backend for parsing and syncing subscriptions, and a client for each platform I may use.
 
-That's the goal of this manifesto: to create a specification for an open standard for synchronizing feeds, a simple API that lets a client request and update subscriptions and items from a remote server.
+That's the goal of this manifesto: to create a specification for an open standard for synchronizing feeds, a simple API that lets a client request and update subscriptions and items from a remote server. The end result should be as architecture-agnostic as possible, preferring a universal and sensible interface to one based on a certain implementation's internal workings.
 
 
 Base URL
