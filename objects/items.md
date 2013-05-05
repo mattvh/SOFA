@@ -143,3 +143,23 @@ None
 * `200 OK` — Success
 * `404 Not Found` — No item was found with this ID.
 * `403 Not Found` — The user is not subscribed to the feed this item belongs to.
+
+
+`GET /items/unread_count.json`
+-----------------------------------------
+
+Returns the number of unread items for the user.
+
+**Response**
+
+    {
+        "count": 371
+    }
+
+**Parameters**
+
+None
+
+**Status Codes**
+
+* `200 OK` — Success
