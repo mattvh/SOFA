@@ -63,4 +63,3 @@ Todo
 ------
 
 * Add some sort of folder/tag taxonomy so a user's feed categorization can be properly described.
-* Add method to rename a feed's display title.
