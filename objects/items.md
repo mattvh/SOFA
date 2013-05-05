@@ -17,6 +17,8 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
             "url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/",
             "pubdate:  1362854961,
             "pubdate_human": "2013-03-09T12:49:21",
+            "read": true,
+            "bookmarked": false,
             "category": [
                 "News"
             ]
@@ -74,6 +76,8 @@ Returns a single item by its unique ID.
         "url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/",
         "pubdate:  1362854961,
         "pubdate_human": "2013-03-09T12:49:21",
+        "read": true,
+         "bookmarked": false,
         "category": [
             "News"
         ]
@@ -113,6 +117,26 @@ None
 **Parameters**
 
 * `read: boolean` — Set the item's read/unread flag.
+
+**Status Codes**
+
+* `200 OK` — Success
+* `404 Not Found` — No item was found with this ID.
+* `403 Not Found` — The user is not subscribed to the feed this item belongs to.
+
+
+`POST /items/3571/bookmark.json`
+-----------------------------------------------
+
+Sets the item's `bookmarked` field to `true` or `false`, according to the supplied parameter.
+
+**Response**
+
+None
+
+**Parameters**
+
+* `bookmark: boolean` — Set the item's bookmark flag.
 
 **Status Codes**
 
