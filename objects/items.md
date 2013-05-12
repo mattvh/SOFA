@@ -19,7 +19,7 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
             "pubdate_human": "2013-03-09T12:49:21",
             "read": true,
             "bookmarked": false,
-            "category": [
+            "categories": [
                 "News"
             ]
             "comments_url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/#comments",
@@ -79,7 +79,7 @@ Returns a single item by its unique ID.
         "pubdate_human": "2013-03-09T12:49:21",
         "read": true,
          "bookmarked": false,
-        "category": [
+        "categories": [
             "News"
         ]
         "comments_url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/#comments",
