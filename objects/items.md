@@ -105,7 +105,7 @@ None
 
 * `200 OK` — Success
 * `404 Not Found` — No item was found with this ID.
-* `403 Not Found` — The user is not subscribed to the feed this item belongs to.
+* `403 Forbidden` — The user is not subscribed to the feed this item belongs to.
 
 
 `POST /items/3571/mark_as_read.json`
@@ -125,7 +125,7 @@ None
 
 * `200 OK` — Success
 * `404 Not Found` — No item was found with this ID.
-* `403 Not Found` — The user is not subscribed to the feed this item belongs to.
+* `403 Forbidden` — The user is not subscribed to the feed this item belongs to.
 
 
 `POST /items/3571/bookmark.json`
@@ -145,7 +145,7 @@ None
 
 * `200 OK` — Success
 * `404 Not Found` — No item was found with this ID.
-* `403 Not Found` — The user is not subscribed to the feed this item belongs to.
+* `403 Forbidden` — The user is not subscribed to the feed this item belongs to.
 
 
 `GET /items/unread_count.json`
