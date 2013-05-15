@@ -45,7 +45,6 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
 **Parameters**
 
 * `feed_id: integer` — Show results from a specific subscription, using its ID.
-* `folder: string` — Show results from subscriptions in one of the user's folders.
 * `page: integer` — Results from all requests to `GET /items.json` should be limited to ~100 items per page, with the `page` parameter allowing pagination. Otherwise you could end up with absurdly huge requests...
 * `read: boolean` — Only show items that are unread (false) or unread (true).
 * `bookmarked: boolean` — If you have a "starring" or "saving" system, limit the results to items that have been marked.
