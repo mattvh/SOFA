@@ -17,6 +17,7 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
             "url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/",
             "pubdate:  1362854961,
             "pubdate_human": "2013-03-09T12:49:21",
+            "author": "Matt Harzewski",
             "read": true,
             "bookmarked": false,
             "categories": [
@@ -77,6 +78,7 @@ Returns a single item by its unique ID.
         "url": "http:\/\/www.fantasyfolder.com\/news\/terry-pratchett-announced-new-discworld-novel-raising-steam\/",
         "pubdate:  1362854961,
         "pubdate_human": "2013-03-09T12:49:21",
+        "author": "Matt Harzewski",
         "read": true,
          "bookmarked": false,
         "categories": [
