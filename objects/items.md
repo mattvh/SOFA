@@ -41,11 +41,13 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
 * The `enclosures` field should contain an array of any enclosures found in the feed. RSS 2.0 feeds commonly have multiple enclosures, despite the fact that the authors did not intend for more than one to be used per item. The RSS 2.0 spec is ambiguous as a result, but common usage dictates support for multiple enclosures.
 * `content` should contain the full article content made available by the source feed, while `summary` would have a brief extract, such as the first few sentences. (Some feeds contain both.)
 * Endpoint returns an empty array if there are no items matching the specified criteria.
+* Results from all requests to `GET /items.json` should be limited to 100 items per page by default, with the `limit` and `offset` parameters allowing pagination. Otherwise you could end up with absurdly huge requests. See the parameters listing for further details.
 
 **Parameters**
 
 * `feed_id: integer` — Show results from a specific subscription, using its ID.
-* `page: integer` — Results from all requests to `GET /items.json` should be limited to ~100 items per page, with the `page` parameter allowing pagination. Otherwise you could end up with absurdly huge requests...
+* `limit: integer` — The number of results to return. Default should be 100, maximum 200.
+* `offset: integer` — To access results past `limit`, the `offset` parameter should be used. e.g. the second "page" of results, with the default limit of 100, would be an offset of 100.
 * `read: boolean` — Only show items that are unread (false) or unread (true).
 * `bookmarked: boolean` — If you have a "starring" or "saving" system, limit the results to items that have been marked.
 * `since: [Unix or ISO 8601 time]` — Return items since this date.
