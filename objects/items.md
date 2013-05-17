@@ -56,6 +56,15 @@ Returns subscription entries for a user. Defaults to *all* from the user's subsc
 
 * `200 OK` — Success
 
+**Pagination and HTTP Headers**
+
+SOFA uses the HTTP Link header to supply clients with pagination hinting. A paginated result set should send the Link header with two URLs: one matching the next set of results and one matching the last. (Both should retain any query variables set by the client.) When accessing the last result set, the "next" link should be omitted.
+
+*(Discuss: While this seems like a good idea in theory, it may not be terribly necessary in real-world usage...and is extra work to implement.)*
+
+    Link: <http://domain.tld/sofa/1/items.json?offset=100&limit=100>; rel='next',
+    <http://domain.tld/sofa/1/items.json?offset=900&limit=100>; rel='last'
+
 **Notes for Discussion**
 
 As it stands, items belonging to a subscription are queried using the `feed_id` parameter. Is that the best way to handle it, or should it work more like this:
